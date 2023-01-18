@@ -52,6 +52,13 @@ spec:
                 secretKeyRef:
                   name: mysql-secret
                   key: DB_DATABASE
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "200m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
       volumes:
         - name: codeigniter-api-data
           persistentVolumeClaim:
